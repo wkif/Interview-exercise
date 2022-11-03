@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 动手实现一个左右固定100px，中间自适应的三列布局 -->
+    <div class="main1">
+      <div class="box1">left</div>
+      <div class="box2">center</div>
+      <div class="box3">right</div>
+    </div>
+    <style>
+      .main1 {
+        width: 100%;
+        background-color: aqua;
+        height: 500px;
+        /* float: left; */
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between; */
+
+        /* position: absolute;
+        left: 0;
+        top: 0; */
+      }
+      .box1 {
+        width: 100px;
+        height: 100%;
+        background-color: antiquewhite;
+        float: left;
+      }
+      .box2 {
+        /* position: absolute; */
+        /* right: 0; */
+        /* top: 0;
+        margin-left: 100px; */
+        float: left;
+      }
+      .box3 {
+        float: right;
+        width: 100px;
+        height: 100%;
+        background-color: blueviolet;
+        /* position: absolute;
+        right: 0;
+        top: 0; */
+      }
+    </style>
+  </body>
+</html>

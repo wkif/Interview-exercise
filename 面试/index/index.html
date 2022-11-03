@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- 手机号 -->
+      <input type="text" name="phone" placeholder="请输入手机号" />
+      <!-- 城市 -->
+      <input type="text" name="city" placeholder="请输入城市" />
+    </form>
+    <button id="btn">提交</button>
+    <div style="width: 100px;padding:10px;margin:10px; background-color:red;""></div>
+  </body>
+  <script>
+    // 发送ajax请求
+
+    const showDialog = (msg) => {
+      alert(msg);
+    };
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+      var phone = document.getElementsByName("phone")[0].value;
+      var city = document.getElementsByName("city")[0].value;
+      if (phone == "") {
+        showDialog("请输入手机号");
+        return false;
+      }
+      if (city == "") {
+        showDialog("请输入城市");
+        return false;
+      }
+      let data = {
+        phone: phone,
+        city: city,
+      };
+      sendUserInfo(data).then((res) => {
+        if (res.status == 200 || res.status == 601) {
+          sendTrack();
+          jump();
+        } else if (res.status == 602) {
+          showDialog("网络异常");
+        }
+      });
+    };
+  </script>
+</html>
