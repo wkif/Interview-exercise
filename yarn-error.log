@@ -1,0 +1,33 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier typescript vitest
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Program Files\nodejs\;D:\Program Files\Git\cmd;C:\Users\kif\AppData\Local\Programs\Python\Python310;C:\Users\kif\AppData\Local\Programs\Python\Python310\Scripts;C:\Python27;C:\Python27\Scripts;D:\Program Files\nodejs\node_global;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Program Files\OpenSSL-Win64\bin;C:\Users\kif\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\kif\AppData\Local\Programs\Python\Python310\;D:\Applications\Scoop\shims;C:\Users\kif\AppData\Local\Microsoft\WindowsApps;C:\Users\kif\AppData\Local\Programs\Microsoft VS Code\bin;;D:\Program Files\JetBrains\PyCharm 2022.2.3\bin;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.17.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+
+npm manifest: 
+  {
+    "name": "interViewVitest",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "kif<kif101001000@163.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

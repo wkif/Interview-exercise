@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片懒加载</title>
+  </head>
+  <body>
+    <div class="app">
+      <img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      />
+      <img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      />
+      <img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      /><img
+        src="../img/loading.png"
+        data-src="https://kifimg.oss-cn-beijing.aliyuncs.com/project/202209101122421.jpg"
+        alt="placeholder"
+        class="img-responsive"
+      />
+    </div>
+  </body>
+  <script>
+    let imgList = document.getElementsByClassName("img-responsive");
+    let innerHeight = window.innerHeight;
+    let n = 0;
+    const imgLoadLzy = function () {
+      for (let i = n; i < imgList.length; i++) {
+        if (imgList[i].getBoundingClientRect().top < innerHeight) {
+          imgList[i].src = imgList[i].getAttribute("data-src");
+          n = i;
+        }
+      }
+    };
+    const debouce = function (func, time) {
+      let timer = null;
+      return function (...args) {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(() => {
+          func.apply(func, ...args);
+        }, time);
+      };
+    };
+    window.addEventListener("scroll", debouce(imgLoadLzy, 200));
+  </script>
+</html>

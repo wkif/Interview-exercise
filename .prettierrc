@@ -1,0 +1,11 @@
+{
+    "tabWidth": 4,//缩进的宽度
+    "useTabs": true,//缩进用tab，不用空格
+    "semi": true,//末尾添加分号
+    "singleQuote": false,//单引号
+    "TrailingCooma": "all",//对象或数组的项末尾自动加逗号
+    "bracketSpacing": true,//对象，数组括号与文字之间加空格 { foo: bar }
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",//箭头函数单一参数是否省略括号
+    "prettier.printWidth": 120//单行的长度
+}
