@@ -34,6 +34,6 @@ describe("main", () => {
     //     // `)
     // });
     test('', () => {
-        expect(customSortString("kqep", "pekeq")).toEqual("kqeep")
+        expect(customSortString("jftiugkz", "kfiukutzjg")).toEqual("jftiuugkkz")
     })
 });

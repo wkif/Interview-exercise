@@ -9,19 +9,24 @@
 
 export function customSortString(order: string, s: string): string {
     let resList = new Array(order.length).fill(null)
-    let strList = s.split('')
-    let list = [].concat(...strList)
+    let strList: Array<string> = s.split('')
+    let list: Array<string> = [].concat(...strList)
     list.forEach(element => {
-        console.log(element)
-        let index:number = order.indexOf(element)
-        console.log(index)
-        if(index>=0){
-            resList[index]= element
-            strList.splice(strList.indexOf(element),1)
-            console.log(strList)
+        let index: number = order.indexOf(element)
+        if (index >= 0) {
+            if(!resList[index]){
+                resList[index] = element
+                strList.splice(strList.indexOf(element), 1)
+            }
         }
     });
+    let list2: Array<string> = [].concat(...strList)
+    list2.forEach(item=>{
+        if(resList.indexOf(item)!==-1){
+            resList.splice(resList.indexOf(item),0,item)
+            strList.splice(strList.indexOf(item), 1)
+        }
+    })
     let res = resList.concat(...strList).join('')
-    console.log('res',res)
     return res
 };
