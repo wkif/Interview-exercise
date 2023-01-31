@@ -1,20 +1,19 @@
-//tsconfig.json
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "rootDir": "./",
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./src/*"] //路径别名 @->src
-    },
-    "types": ["vitest/globals"], //vitest 类型引入
-    "allowJs": true,
-    "sourceMap": true, //便于 debug
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": false, //视使用情况而定
-    "skipLibCheck": true
-  }
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "commonjs",
+		"rootDir": "./",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"] //路径别名 @->src
+		},
+		"types": ["vitest/globals"], //vitest 类型引入
+		"allowJs": true,
+		"sourceMap": true, //便于 debug
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": false, //视使用情况而定
+		"skipLibCheck": true
+	}
 }
