@@ -37,7 +37,7 @@ const treeData = [
 	},
 ];
 
-let input: string = "subsubdir";
+let input = "subsubdir";
 
 function getAns(treeData, name) {
 	let ans = deepSearch(treeData, name);
